@@ -1,6 +1,10 @@
 import streamlit as st
 from transformers import pipeline
 
+#
+# single-sentence/paragraph-sentiment-analyzer
+#
+
 # Load model
 sentiment_analyzer = pipeline("sentiment-analysis")
 
