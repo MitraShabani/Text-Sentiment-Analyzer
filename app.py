@@ -1,6 +1,6 @@
 import streamlit as st
 from transformers import pipeline
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 
 #
@@ -36,5 +36,15 @@ if st.button("Analyze Sentiment"):
          for userInput, result in zip(lines,results):
             st.write(f"  {userInput}  ->  \n{result['label']} ({result['score']:.2f})")
 
+        #  quick summary chart
+         labels = [res["label"] for res in results]
+         positive_count = labels.count("POSITIVE")
+         negative_count = labels.count("NEGATIVE")
+
+         fig, ax = plt.subplots()
+         ax.bar(["Positive", "Negative"], [positive_count, negative_count], color=["green", "red"])
+         ax.set_ylabel("Count")
+         ax.set_title("Sentiment Summary")
+         st.pyplot(fig)
     else:
         st.warning("Please enter at least one non-empty line.")
