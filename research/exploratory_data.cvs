@@ -1,0 +1,14 @@
+Exploratory analysis of emotionally ambiguous sentences.
+Purpose: observe how a binary sentiment model behaves compared to human interpretation.
+Note: small, manually curated sample.
+
+
+Sentence | Model output | Confidence | Human Interpretation
+-----------------------------------
+I achieved what I wanted, but I don’t feel happy. | NEGATIVE | (1.00) | MIXED 
+I am very happy with my life right now. | POSITIVE | (1.00) | POSITIVE 
+I feel sad and disappointed | NEGATIVE | (1.00) | NEGATIVE
+I’m proud of myself, but I feel completely empty. | NEGATIVE | (1.00) | MIXED 
+This was a beautiful moment that also made me very sad. | NEGATIVE | (0.54) | MIXED
+I love my job, but it’s slowly burning me out. | NEGATIVE | (0.94) | MIXED
+I love being here, but at the same time I miss home. | NEGATIVE | (0.98) | MIXED
